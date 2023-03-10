@@ -79,7 +79,7 @@ input:checked ~ .title {
 
 label:active, label:active > .title {
   color: #045bd9;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 820px) {
