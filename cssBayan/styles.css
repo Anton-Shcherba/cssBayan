@@ -1,0 +1,82 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 50%;
+  margin: 0 auto;
+  background-color: #f5f5eb;
+  overflow-y: scroll;
+}
+
+.bayan {
+  width: 100%;
+  color: #045bd9;
+}
+
+.bayan:hover {
+  color: black;
+}
+
+.meme {
+  border-top: solid #dee2e4 .1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title .cross {
+  width: 1.5rem;
+  height: 1.5rem;
+  rotate: 45deg;
+  visibility: hidden;
+  transition: rotate .3s linear;
+}
+
+input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+label {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.mem-img {
+  transform: scale(0);
+  max-height: 0;
+  transition: all .4s linear;
+}
+
+input:checked ~ .mem-img,
+label:hover > .mem-img {
+  transform: scale(1);
+  max-height: 20rem;
+  height: 20rem;
+  margin-bottom: 1.3rem;
+}
+
+input:checked ~ .title .cross,
+label:hover > .title .cross {
+  rotate: 0deg;
+}
+
+input:checked ~ .title {
+  color: black;
+}
+
+.bayan:hover .title .cross {
+  visibility: visible;
+}
+
+label:active, label:active > .title {
+  color: #045bd9;
+  opacity: 0.9;
+}
